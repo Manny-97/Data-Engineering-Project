@@ -1,2 +1,25 @@
-# venv
-venv
+# # venv
+# venv/
+# # data
+# week-1/docker_sql/yellow_tripdata_2021-01.parquet
+# # ny_taxi_postgres_data
+# week-1/docker_sql/ny_taxi_postgres_data/
+
+# env
+.env
+
+.DS_Store
+.idea
+*.tfstate
+*.tfstate.*
+**.terraform
+**.terraform.lock.*
+**google_credentials.json
+**logs/
+**.env
+**__pycache__/
+.history
+**/ny_taxi_postgres_data/*
+serving_dir
+*.csv
+.ipynb_checkpoints/

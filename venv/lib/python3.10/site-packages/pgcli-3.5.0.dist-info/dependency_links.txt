@@ -1,0 +1,1 @@
+http://github.com/psycopg/repo/tarball/master#egg=psycopg-3.0.10
