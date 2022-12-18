@@ -3,7 +3,7 @@ venv/
 # # data
 # week-1/docker_sql/yellow_tripdata_2021-01.parquet
 # # ny_taxi_postgres_data
-# week-1/docker_sql/ny_taxi_postgres_data/
+week-1/docker_sql/ny_taxi_postgres_data/
 
 # env
 .env
