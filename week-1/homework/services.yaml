@@ -1,0 +1,11 @@
+# data ingestion
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-01.csv.gz"
+
+python ingest.py \
+  --user=postgres \
+  --password=${POSTGRES_PASSWORD} \
+  --host=localhost \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=green_taxi_trips \
+  --url=${URL}
