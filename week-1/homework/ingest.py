@@ -15,7 +15,6 @@ def main(params):
     table_name = params.table_name
     url = params.url
     output_csv = "green_tripdata_2019-01.csv.gz"
-    zone_lookup = "https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
 
     os.system(f"wget {url} -O {output_csv}")
     
