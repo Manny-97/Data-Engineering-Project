@@ -61,6 +61,10 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+    GOOGLE_APPLICATION_CREDENTIALS: ./data-engineering-375914-4406ec33a5e3.json
+    AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: ''
+    GCP_PROJECT_ID: ''
+    GCP_GCS_BUCKET: ""
   volumes:
     - ./dags_new:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
