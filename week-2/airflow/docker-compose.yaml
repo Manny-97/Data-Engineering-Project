@@ -65,6 +65,11 @@ x-airflow-common:
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: ''
     GCP_PROJECT_ID: ''
     GCP_GCS_BUCKET: ""
+    PG_HOST: "${PG_HOST}"
+    PG_USER: "${PG_USER}"
+    PG_PASSWORD: "${PG_PASSWORD}"
+    PG_PORT: "${PG_PORT}"
+    PG_DATABASE: "${PG_DATABASE}"
   volumes:
     - ./dags_new:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
