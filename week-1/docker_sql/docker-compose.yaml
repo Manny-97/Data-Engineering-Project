@@ -16,3 +16,9 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=root
     ports:
       - "8080:80"
+
+networks:
+  airflow:
+    externals:
+      name: custom_network
+# airflow_default
