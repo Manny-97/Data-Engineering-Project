@@ -31,38 +31,34 @@ def extract_data(url: str)-> pd.DataFrame:
     return df
 
 @task(log_prints=True, retries=3)
-def ingest_data(user: str, password: str, host: str, port: int, db: str, table_name: str, df: pd.DataFrame):
+def ingest_data(table_name: str, df: pd.DataFrame):
 
-    url = URL.create("postgresql", username=user, password=password, host=host, database=db, port=port)
-    engine = create_engine(url)   
+    connection_block = SqlAlchemyConnector.load("insert-trip-data")
+    with connection_block.get_connection(begin=False) as engine:  
 
-    print(pd.io.sql.get_schema(df, name=table_name, con=engine))
+        print(pd.io.sql.get_schema(df, name=table_name, con=engine))
 
-    df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace')
+        df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace')
 
-    df.to_sql(name=table_name, con=engine, if_exists='append')
+        df.to_sql(name=table_name, con=engine, if_exists='append')
 
-    query = """
-    SELECT *
-    FROM yellow_taxi_trips
-    LIMIT 10;
-    """
-    print(pd.read_sql(query, con=engine)
-    )
+        query = """
+        SELECT *
+        FROM yellow_taxi_trips
+        LIMIT 10;
+        """
+        print(pd.read_sql(query, con=engine)
+        )
 
 @flow(name="Ingest Flow")
 def main(table_name: str):
-    user=''
-    password=''
-    host=''
-    port=
-    db=''
+
     parquet_url='https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-02.parquet'
 
 
     raw_data = extract_data(parquet_url)
     data = transform_data(raw_data)
-    ingest_data(user, password, host, port, db, table_name, data)
+    ingest_data(table_name, data)
 
 if __name__ == '__main__':
     
