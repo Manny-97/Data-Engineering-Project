@@ -7,18 +7,19 @@ RUN apt-get update -qq && apt-get install vim -qqq
 # git gcc g++ -qqq
 
 COPY requirements.txt .
-RUN pip install --no-cache-directory -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir pandas sqlalchemy psycopg2-binary
 
-SHELL ["/bin/bash", "-o", "pipefail", "-e", "-e", "-u", "-x", "-c"]
+# SHELL ["/bin/bash", "-o", "pipefail", "-e", "-e", "-u", "-x", "-c"]
 
-ARG CLOUD_SDK_VERSION=322.0.0
-ENV GCLOUD_HOME=/home/google-cloud-sdk
+# ARG CLOUD_SDK_VERSION=322.0.0
+# ENV GCLOUD_HOME=/home/google-cloud-sdk
 
-ENV PATH="${GCLOUD_HOME}/bin/:${PATH}"
+# ENV PATH="${GCLOUD_HOME}/bin/:${PATH}"
 
-RUN DOWNLOAD_URL=""
+# RUN DOWNLOAD_URL=""
 
 
-WORKDIR $AIRFLOW_HOME
+# WORKDIR $AIRFLOW_HOME
 
-USER $AIRFLOW_UID
+# USER $AIRFLOW_UID
