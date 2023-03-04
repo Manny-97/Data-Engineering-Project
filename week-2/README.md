@@ -12,7 +12,7 @@
 4. Set the Airflow User:
 
         mkdir -p ./dags ./logs ./plugins
-        echo -e "AIRFLOW_UID=$(d -u)" > .env
+        echo -e "AIRFLOW_UID=$(id -u)" > .env
 
 5. Docker Build:
 
