@@ -1,7 +1,7 @@
 .csv
 code/fhvhv_tripdata_2021-01.parquet
 .csv.gz
-.snappy.parquet
+homework/fhvhv/*.snappy.parquet
 code/head.parquet
 code/zones
 /.ipynb_checkpoints
