@@ -1,6 +1,6 @@
 ## MacOS
 
-Here we'll show you how to install Spark 3.2.1 for MacOS.
+Here we'll show you how to install Spark 3.3.2 for MacOS.
 We tested it on MacOS Monterey 12.0.1, but it should work
 for other MacOS versions as well
 
@@ -42,7 +42,7 @@ brew install apache-spark
 Add the following environment variables to your `.bash_profile` or `.zshrc`. Replace the path to `SPARK_HOME` to the path on your own host. Run `brew info apache-spark` to get this.
 
 ```bash
-export SPARK_HOME=/usr/local/Cellar/apache-spark/3.2.1/libexec
+export SPARK_HOME=/usr/local/Cellar/apache-spark/3.3.2/libexec
 export PATH="$SPARK_HOME/bin/:$PATH"
 ```
 
