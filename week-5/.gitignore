@@ -1,4 +1,5 @@
 .csv
-.parquet
-/zones
+code/fhvhv_tripdata_2021-01.parquet
+code/head.parquet
+code/zones
 /.ipynb_checkpoints
