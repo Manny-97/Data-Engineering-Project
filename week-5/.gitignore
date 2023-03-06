@@ -1,7 +1,7 @@
 .csv
 code/fhvhv_tripdata_2021-01.parquet
 homework/*.csv.gz
-homework/fhvhv/*.snappy.parquet
+homework/fhvhv/
 code/fhvhv
 code/head.parquet
 code/zones
