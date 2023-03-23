@@ -16,7 +16,7 @@ In this homework, there will be two sections, the first session focus on theoret
 **Please select the Kafka concepts that support reliability and availability**
 
 - [x] Topic Replication
-- [ ] Topic Paritioning
+- [x] Topic Paritioning
 - [ ] Consumer Group Id
 - [ ] Ack All
 
