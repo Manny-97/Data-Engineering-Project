@@ -25,7 +25,7 @@ In this homework, there will be two sections, the first session focus on theoret
 
 **Please select the Kafka concepts that support scaling**
 
-- [ ] Topic Replication
+- [x] Topic Replication
 - [x] Topic Paritioning
 - [x] Consumer Group Id
 - [ ] Ack All
